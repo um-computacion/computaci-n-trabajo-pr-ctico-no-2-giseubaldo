@@ -22,6 +22,15 @@ class TestPalindrome(unittest.TestCase):
         self.assertTrue(is_palindrome("Yo, Banana Boy!"))
         self.assertTrue(is_palindrome("Rats live on no evil star"))
 
+    def test_non_palindromes(self):
+        self.assertFalse(is_palindrome("hello"))
+        self.assertFalse(is_palindrome("python"))
+        self.assertFalse(is_palindrome("This is not a palindrome"))
+        self.assertFalse(is_palindrome("computacion"))
+        self.assertFalse(is_palindrome("milestone"))
+        self.assertFalse(is_palindrome("issue"))
+        self.assertFalse(is_palindrome("labels"))
+
     def is_palindrome(texto):
     limpio = ''.join(c.lower() for c in texto if c.isalnum())
     return limpio == limpio[::-1]
