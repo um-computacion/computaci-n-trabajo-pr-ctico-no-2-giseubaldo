@@ -20,5 +20,9 @@ def clean_text(text):
     for char in text:
         if char.isalnum():  # Verifica si es una letra o un número
             cleaned_text += char
-            
+
     return cleaned_text
+
+def compare_characters(text):
+
+    return text == text[::-1]
