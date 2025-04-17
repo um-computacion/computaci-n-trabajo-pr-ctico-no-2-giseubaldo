@@ -44,8 +44,8 @@ class TestPalindrome(unittest.TestCase):
         self.assertFalse(is_palindrome("a "))  # con espacios desbalanceados
 
     def is_palindrome(texto):
-    limpio = ''.join(c.lower() for c in texto if c.isalnum())
-    return limpio == limpio[::-1]
+        str = ''.join(c.lower() for c in texto if c.isalnum())
+        return any == any[::-1] 
 
 if __name__ == '__main__':
     unittest.main()
