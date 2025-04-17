@@ -31,6 +31,18 @@ class TestPalindrome(unittest.TestCase):
         self.assertFalse(is_palindrome("issue"))
         self.assertFalse(is_palindrome("labels"))
 
+    def test_edge_cases(self):
+        self.assertTrue(is_palindrome("")) #cadena vacia
+        self.assertTrue(is_palindrome("a")) #un solo caracter 
+        self.assertTrue(is_palindrome("A")) #un solo caracter mayuscula
+        self.assertTrue(is_palindrome(" "))  # espacio
+        self.assertTrue(is_palindrome("   "))  # varios espacios
+        self.assertTrue(is_palindrome("!!!"))  # solo símbolos
+        self.assertTrue(is_palindrome("1"))  # número único
+        self.assertTrue(is_palindrome("121"))  # número palíndromo
+        self.assertFalse(is_palindrome("  a"))  # con espacios desbalanceados
+        self.assertFalse(is_palindrome("a "))  # con espacios desbalanceados
+
     def is_palindrome(texto):
     limpio = ''.join(c.lower() for c in texto if c.isalnum())
     return limpio == limpio[::-1]
